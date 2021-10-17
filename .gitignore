@@ -1,2 +1,5 @@
 .venv/
 models/
+**/__pycache__/
+checkpoints/
+data

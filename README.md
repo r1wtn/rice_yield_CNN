@@ -16,6 +16,10 @@ Rice Yield CNN is ...
 
 - NVIDIA GeForce RTX 3090 x2
 
+### CUDA
+
+- Cuda compilation tools, release 11.3, V11.3.109
+
 ### Python
 
 - Python 3.8.8
@@ -29,16 +33,36 @@ Rice Yield CNN is ...
 pip install -r requirements.txt
 ```
 
-2. Download pre-trained model from google drive.
+2. Install Pytorch
+
+Please install pytorch version compatible with your cuda version.
+
+For example, If you use cuda version 11.3,
 
 ```bash
-mkdir models
+pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+
+3. Download pre-trained model from google drive.
+
+```bash
+mkdir checkpoints
 wget "https://drive.google.com/u/0/uc?export=download&id=1XgTUGK8130gnY9AF3gYv9zhJSJaxhHVp" -O rice_yield_CNN.pth
 ```
 
-3. Start yield estimation with example images.
+## Estimation
+
+Run
 
 ```bash
-python estimate.py --images data/example/
+python estimate.py --checkpoint_path checkpoints/rice_yield_CNN.pth --image_dir example
 ```
 
+You can find estimated yield on your console.
+
+Below are meanings of options.
+
+- checkpoint_path : Path to the checkpoint file you saved.
+
+- image_dir : path to the directory where images are saved.
