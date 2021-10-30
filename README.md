@@ -1,6 +1,7 @@
 # Rice Yield CNN
 
-Rice Yield CNN is a model to estimate the rice yield based on RGB image of rice canopy at harvest. The model is developed based on more than 22,000 images and yield database collected across 7 countries.
+Rice Yield CNN is a model to estimate the rice yield based on RGB image of rice canopy at harvest. The model is developed based on more than 22,000 images and yield database collected across 7 countries.  
+This project is the implementation of the paper "[Deep learning-based estimation of rice yield using RGB image](https://www.researchsquare.com/article/rs-1026695/v1)".
 
 ## Performance 
 
