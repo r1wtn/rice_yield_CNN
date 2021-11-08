@@ -3,3 +3,5 @@ models/
 **/__pycache__/
 checkpoints/
 data
+**/tmp/
+.python-version

@@ -68,7 +68,7 @@ wget "https://drive.google.com/u/0/uc?export=download&id=1XgTUGK8130gnY9AF3gYv9z
 Run
 
 ```bash
-python estimate.py --checkpoint_path checkpoints/rice_yield_CNN.pth --image_dir example
+python estimate.py --checkpoint_path checkpoints/rice_yield_CNN.pth --image_dir example --csv
 ```
 
 You can find estimated yield on your console.
@@ -78,3 +78,5 @@ Below are meanings of options.
 - checkpoint_path : Path to the checkpoint file you saved.
 
 - image_dir : path to the directory where images are saved.
+
+- csv: If you set this, csv of results will be generated.
